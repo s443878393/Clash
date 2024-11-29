@@ -49,7 +49,6 @@ proxies:
   - { name: '🇯🇵 日本家宽 05丨3x JP', type: ss, server: 1ntjhpl0.epicgames.ink, port: 13242, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: cb1ef9a3477c.microsoft.com }, tfo: true, udp: true }
   - { name: '🇰🇷 韩国家宽 01丨5x KR', type: ss, server: 1ntjhpl0.epicgames.ink, port: 50016, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: cb1ef9a3477c.microsoft.com }, tfo: true, udp: true }
   - { name: '🇰🇷 韩国家宽 02丨5x KR', type: ss, server: 1ntjhpl0.epicgames.ink, port: 50015, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: cb1ef9a3477c.microsoft.com }, tfo: true, udp: true }
-  # 缅甸代理
  - {name: "缅甸1", server: rotating.proxyempire.io, port: 9000, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}  # 更新的服务器信息
  - {name: "缅甸2", server: rotating.proxyempire.io, port: 9001, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}  # 更新的服务器信息
  - {name: "缅甸3", server: rotating.proxyempire.io, port: 9002, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}  # 更新的服务器信息
