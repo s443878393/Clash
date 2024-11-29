@@ -57,9 +57,9 @@ proxies:
   - {name: "缅甸5", type: socks5, server: rotating.proxyempire.io, port: 9004, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}
   - {name: "缅甸6", type: socks5, server: rotating.proxyempire.io, port: 9005, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}
   - {name: "缅甸7", type: socks5, server: rotating.proxyempire.io, port: 9006, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}
-  - {name: "myanmar+country+co.", type: socks5, server: rotating.proxyempire.io, port: 9007, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}
-  - {name: "frontiir+co.", type: socks5, server: rotating.proxyempire.io, port: 9008, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}
-  - {name: "welink", type: socks5, server: rotating.proxyempire.io, port: 9009, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}
+  - {name: "myanmar+country+co.", type: socks5, server: rotating.proxyempire.io, port: 9007, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;myanmar+country+co.;yangon;yangon"}
+  - {name: "frontiir+co.", type: socks5, server: rotating.proxyempire.io, port: 9008, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;frontiir+co.;yangon;yangon"}
+  - {name: "welink", type: socks5, server: rotating.proxyempire.io, port: 9009, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;welink;yangon;yangon"}
 
 # 代理组配置
 proxy-groups:
