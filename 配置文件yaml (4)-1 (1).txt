@@ -55,7 +55,7 @@ proxies:
  - {name: "缅甸4", server: rotating.proxyempire.io, port: 9003, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}  # 更新的服务器信息
  - {name: "缅甸5", server: rotating.proxyempire.io, port: 9004, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}  # 更新的服务器信息
  - {name: "缅甸6", server: rotating.proxyempire.io, port: 9005, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}  # 更新的服务器信息
- - {name: "缅甸7", server: rotating.proxyempire.io, port: 9006, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}  # 更新的服务器信息
+ - {name: "缅甸7", server: rotating.proxyempire.io, port: 9006, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;ng;kkon+technologies+ltd;lagos;lagos"}  # 更新的服务器信息
  - {name: "myanmar+country+co.", server: rotating.proxyempire.io, port: 9007, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;myanmar+country+co.;yangon;yangon"}  # 更新的服务器信息
  - {name: "frontiir+co.", server: rotating.proxyempire.io, port: 9008, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;frontiir+co.;yangon;yangon"}  # 更新的服务器信息
  - {name: "welink", server: rotating.proxyempire.io, port: 9000, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;welink;yangon;yangon"}  # 更新的服务器信息
