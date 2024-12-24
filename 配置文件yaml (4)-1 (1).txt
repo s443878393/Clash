@@ -110,9 +110,7 @@ proxy-groups:
 
   # 缅甸代理组（通过机场中转）
   - name: Play
-    type: relay
     proxies:
-      - 机场代理
       - 缅甸线路
 
   # 缅甸线路选择组
