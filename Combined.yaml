@@ -63,4 +63,4 @@ rules:
   - DOMAIN-SUFFIX,browserleaks.com,缅甸线路
 
   # 所有其他流量默认走缅甸线路
-  - MATCH,缅甸线路
+  - MATCH,DIRECT
