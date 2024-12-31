@@ -1,0 +1,47 @@
+port: 10100
+socks-port: 10101
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+
+# 代理服务器列表
+proxies:
+  - {name: "尼日1", server: rotating.proxyempire.io, port: 9000, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;ng;vdt+communications;lagos;lagos"}
+  - {name: "尼日2", server: rotating.proxyempire.io, port: 9001, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;ng;kkon+technologies+ltd;lagos;lagos"}
+
+proxy-groups:
+  # 尼日线路选择组
+  - name: 尼日线路
+    type: select
+    proxies:
+      - 尼日1
+      - 尼日2
+
+rules:
+  # Google Play 相关服务
+  - DOMAIN,play.googleapis.com,尼日线路
+  - DOMAIN,myaccount.google.com,尼日线路
+  - DOMAIN-KEYWORD,accounts.google.com,尼日线路
+  - DOMAIN,play-fe.googleapis.com,尼日线路
+  - DOMAIN,sspanel.net,尼日线路
+  - DOMAIN,payments-pa.googleapis.com,尼日线路
+  
+  # IP 检测网站
+  - DOMAIN-SUFFIX,ip.sb,尼日线路
+  - DOMAIN-SUFFIX,ipip.net,尼日线路
+  - DOMAIN-SUFFIX,ip138.com,尼日线路
+  - DOMAIN,ip.chinaz.com,尼日线路
+  - DOMAIN,whatismyip.com,尼日线路
+  - DOMAIN,api.ip.sb,尼日线路
+  - DOMAIN-SUFFIX,whatismyaddress.app,尼日线路
+  - DOMAIN,whatismyaddress.app,尼日线路
+  - DOMAIN-SUFFIX,ip2location.com,尼日线路
+  - DOMAIN,ip2location.com,尼日线路
+  - DOMAIN-SUFFIX,ipapi.co,尼日线路
+  - DOMAIN-SUFFIX,ip-api.com,尼日线路
+  - DOMAIN-SUFFIX,ipleak.net,尼日线路
+  - DOMAIN-SUFFIX,browserleaks.com,尼日线路
+
+  # 所有其他流量默认走直连
+  - MATCH,DIRECT
