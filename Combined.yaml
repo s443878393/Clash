@@ -12,7 +12,7 @@ proxies:
   - {name: "缅甸2", type: socks5, server: rotating.proxyempire.io, port: 9001, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}
   - {name: "缅甸3", type: socks5, server: 34.141.138.189, port: 9002, username: "9ae3f480-d353c061-fa68c1", password: "mobile;mm;myanma+posts+and+telecommunications;yangon;yangon"}
   - {name: "缅甸4", type: socks5, server: 34.141.138.189, port: 9001, username: "9ae3f480-d353c061-fa68c1", password: "wifi;mm;;yangon;yangon"}
-  - {name: "缅甸5", type: socks5, server: 34.141.138.189, port: 9000, username: "9ae3f480-d353c061-008588", password: "wifi;mm;myanma+posts+and+telecommunications;yangon;yangon"}
+  - {name: "myanma+posts+and+telecommunications", type: socks5, server: 34.141.138.189, port: 9000, username: "9ae3f480-d353c061-008588", password: "wifi;mm;myanma+posts+and+telecommunications;yangon;yangon"}
   - {name: "e+r+s+technology", type: socks5, server: rotating.proxyempire.io, port: 9005, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;e+r+s+technology;yangon;yangon"}
   - {name: "horizon+telecom+international+company", type: socks5, server: rotating.proxyempire.io, port: 9006, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;horizon+telecom+international+company;yangon;yangon"}
   - {name: "myanmar+country+co.", type: socks5, server: rotating.proxyempire.io, port: 9007, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}
@@ -29,7 +29,7 @@ proxy-groups:
       - 缅甸2
       - 缅甸3
       - 缅甸4
-      - 缅甸5
+      - myanma+posts+and+telecommunications
       - e+r+s+technology
       - horizon+telecom+international+company
       - myanmar+country+co.
