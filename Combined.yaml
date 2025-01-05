@@ -35,7 +35,11 @@ proxy-groups:
       - myanmar+country+co.
       - frontiir+co.
       - welink
-
+      
+    disable-udp: false
+    health-check:
+      enable: false
+      interval: 600
 # 规则配置
 rules:
   # Google Play 相关服务
