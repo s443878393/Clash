@@ -1,9 +1,9 @@
-port: 10100
-socks-port: 10101
+port: 7890
+socks-port: 7891
 allow-lan: true
 mode: Rule
 log-level: info
-external-controller: :9090
+external-controller: 127.0.0.1:9090
 
 # 代理服务器列表
 proxies:
@@ -17,6 +17,12 @@ proxy-groups:
     proxies:
       - 尼日1
       - 尼日2
+
+    disable-udp: false
+    health-check:
+      enable: false
+      interval: 600
+      url: http://www.gstatic.com/generate_204
 
 rules:
   # Google Play 相关服务
