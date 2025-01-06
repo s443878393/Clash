@@ -6,68 +6,70 @@ mode: Rule                     # 规则模式：Rule/Global/Direct
 log-level: info                # 日志级别
 external-controller: 127.0.0.1:9090  # 外部控制器地址
 
+# 基础配置部分保持不变...
+
 # 缅甸代理服务器列表
 proxies:
   # 缅甸WiFi线路 1-5
   - {name: "缅甸1", 
-     server: 106.75.152.119, 
-     port: 1000, 
+     server: 34.141.129.232, 
+     port: 9000, 
      type: socks5, 
      username: "9ae3f480-d353c061-1ba21e", 
      password: "wifi-mm--yangon-yangon"}
   - {name: "缅甸2", 
-     server: 106.75.152.119, 
-     port: 1001, 
+     server: 34.141.129.232, 
+     port: 9001, 
      type: socks5, 
      username: "9ae3f480-d353c061-ad7274", 
      password: "wifi-mm--yangon-yangon"}
   - {name: "缅甸3", 
-     server: 106.75.152.119, 
-     port: 1002, 
+     server: 34.141.129.232, 
+     port: 9002, 
      type: socks5, 
      username: "9ae3f480-d353c061-be2df0", 
      password: "wifi-mm--yangon-yangon"}
   - {name: "缅甸4", 
-     server: 106.75.152.119, 
-     port: 1003, 
+     server: 34.141.129.232, 
+     port: 9003, 
      type: socks5, 
      username: "9ae3f480-d353c061-7afd35", 
      password: "wifi-mm--yangon-yangon"}
   - {name: "缅甸5", 
-     server: 106.75.152.119, 
-     port: 1004, 
+     server: 34.141.129.232, 
+     port: 9004, 
      type: socks5, 
      username: "9ae3f480-d353c061-a0d58f", 
      password: "wifi-mm--yangon-yangon"}
   
   # 缅甸移动线路 6-10
   - {name: "缅甸6", 
-     server: 106.75.152.119, 
-     port: 1005, 
+     server: 34.141.129.232, 
+     port: 9005, 
      type: socks5, 
      username: "9ae3f480-d353c061-5f9541", 
      password: "mobile-mm--yangon-yangon"}
   - {name: "缅甸7", 
-     server: 106.75.152.119, 
-     port: 1006, 
+     server: 34.141.129.232, 
+     port: 9006, 
      type: socks5, 
      username: "9ae3f480-d353c061-f0843c", 
      password: "mobile-mm--yangon-yangon"}
   - {name: "缅甸8", 
-     server: 106.75.152.119, 
-     port: 1007, 
+     server: 34.141.129.232, 
+     port: 9007, 
      type: socks5, 
      username: "9ae3f480-d353c061-e32aa3", 
      password: "mobile-mm--yangon-yangon"}
   - {name: "缅甸9", 
-     server: 106.75.152.119, 
-     port: 1008, 
+     server: 34.141.129.232, 
+     port: 9008, 
      type: socks5, 
      username: "9ae3f480-d353c061-d98f5e", 
      password: "mobile-mm--yangon-yangon"}
   - {name: "缅甸10", 
-     server: 106.75.152.119, 
-     port: 1009, 
+     server: 34.141.129.232, 
+     port: 9009, 
      type: socks5, 
      username: "9ae3f480-d353c061-120007", 
      password: "mobile-mm--yangon-yangon"}
