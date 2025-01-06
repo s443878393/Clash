@@ -1,123 +1,119 @@
-port: 7890
-socks-port: 7891
-allow-lan: true
-mode: Rule
-log-level: info
-external-controller: 127.0.0.1:9090
+# 基础配置
+port: 7890                      # HTTP代理端口
+socks-port: 7891               # SOCKS5代理端口
+allow-lan: true                # 允许局域网访问
+mode: Rule                     # 规则模式：Rule/Global/Direct
+log-level: info                # 日志级别
+external-controller: 127.0.0.1:9090  # 外部控制器地址
 
-# 代理服务器列表
+# 缅甸代理服务器列表
 proxies:
-  # 机场代理
-    - { name: '🇭🇰 香港 01丨1x HK', type: ss, server: 667xwsqg.epicgames.ink, port: 12022, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇭🇰 香港 02丨1x HK', type: ss, server: 667xwsqg.epicgames.ink, port: 12023, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇭🇰 香港 03丨1x HK', type: ss, server: 667xwsqg.epicgames.ink, port: 12024, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇭🇰 香港家宽 01丨1x HK', type: ss, server: 667xwsqg.epicgames.ink, port: 12729, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇭🇰 香港家宽 02丨1x HK', type: ss, server: 667xwsqg.epicgames.ink, port: 13105, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇭🇰 香港家宽 03丨1x HK', type: ss, server: 667xwsqg.epicgames.ink, port: 13115, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇭🇰 香港家宽 04丨3x HK', type: ss, server: 667xwsqg.epicgames.ink, port: 20033, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇭🇰 香港家宽 05丨3x HK', type: ss, server: 667xwsqg.epicgames.ink, port: 20034, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇭🇰 香港游戏丨2x HK', type: ss, server: 667xwsqg.epicgames.ink, port: 12312, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇲🇴 澳门家宽 01丨5x MO', type: ss, server: 667xwsqg.epicgames.ink, port: 19527, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇲🇴 澳门家宽 02丨5x MO', type: ss, server: 667xwsqg.epicgames.ink, port: 20032, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇹🇼 台湾 01丨1x TW', type: ss, server: 667xwsqg.epicgames.ink, port: 12304, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇹🇼 台湾 02丨1x TW', type: ss, server: 667xwsqg.epicgames.ink, port: 12305, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇹🇼 台湾 03丨1x TW', type: ss, server: 667xwsqg.epicgames.ink, port: 12306, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇹🇼 台湾家宽 01丨3x TW', type: ss, server: 667xwsqg.epicgames.ink, port: 20036, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇹🇼 台湾家宽 02丨3x TW', type: ss, server: 667xwsqg.epicgames.ink, port: 20037, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇹🇼 台湾家宽 03丨3x TW', type: ss, server: 667xwsqg.epicgames.ink, port: 20038, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇸🇬 新加坡 01丨1x SG', type: ss, server: 667xwsqg.epicgames.ink, port: 12000, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇸🇬 新加坡 02丨1x SG', type: ss, server: 667xwsqg.epicgames.ink, port: 12002, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇸🇬 新加坡 03丨1x SG', type: ss, server: 667xwsqg.epicgames.ink, port: 12003, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇸🇬 新加坡家宽 01丨3x SG', type: ss, server: 667xwsqg.epicgames.ink, port: 12726, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇸🇬 新加坡家宽 02丨3x SG', type: ss, server: 667xwsqg.epicgames.ink, port: 13116, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇸🇬 新加坡家宽 03丨3x SG', type: ss, server: 667xwsqg.epicgames.ink, port: 13132, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇸🇬 新加坡家宽 04丨3x SG', type: ss, server: 667xwsqg.epicgames.ink, port: 20039, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇲🇾 马来西亚家宽 01丨1x MY', type: ss, server: 667xwsqg.epicgames.ink, port: 12727, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇲🇾 马来西亚家宽 02丨1x MY', type: ss, server: 667xwsqg.epicgames.ink, port: 13182, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇰🇭 柬埔寨丨3x KH', type: ss, server: 667xwsqg.epicgames.ink, port: 12701, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇹🇭 泰国丨3x TH', type: ss, server: 667xwsqg.epicgames.ink, port: 20054, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇲🇲 缅甸丨10x MM', type: ss, server: 667xwsqg.epicgames.ink, port: 13137, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇱🇦 老挝丨5x LA', type: ss, server: 667xwsqg.epicgames.ink, port: 13138, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇻🇳 越南丨1x VN', type: ss, server: 667xwsqg.epicgames.ink, port: 12316, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇻🇳 越南家宽丨3x VN', type: ss, server: 667xwsqg.epicgames.ink, port: 12700, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇯🇵 日本 01丨1x JP', type: ss, server: hmxawpw7.epicgames.ink, port: 12011, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇯🇵 日本 02丨1x JP', type: ss, server: hmxawpw7.epicgames.ink, port: 12010, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇯🇵 日本 03丨1x JP', type: ss, server: hmxawpw7.epicgames.ink, port: 12012, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇯🇵 日本 04丨3x JP', type: ss, server: hmxawpw7.epicgames.ink, port: 13235, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇯🇵 日本 05丨3x JP', type: ss, server: hmxawpw7.epicgames.ink, port: 13269, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇯🇵 日本家宽 01丨3x JP', type: ss, server: hmxawpw7.epicgames.ink, port: 13101, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇯🇵 日本家宽 02丨3x JP', type: ss, server: hmxawpw7.epicgames.ink, port: 13221, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇯🇵 日本家宽 03丨3x JP', type: ss, server: hmxawpw7.epicgames.ink, port: 13240, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇯🇵 日本家宽 04丨3x JP', type: ss, server: hmxawpw7.epicgames.ink, port: 13241, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇯🇵 日本家宽 05丨3x JP', type: ss, server: hmxawpw7.epicgames.ink, port: 13242, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇯🇵 日本游戏丨2x JP', type: ss, server: hmxawpw7.epicgames.ink, port: 13024, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇰🇷 韩国家宽 01丨4x KR', type: ss, server: hmxawpw7.epicgames.ink, port: 50017, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇰🇷 韩国家宽 02丨5x KR', type: ss, server: hmxawpw7.epicgames.ink, port: 50016, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - { name: '🇰🇷 韩国家宽 03丨5x KR', type: ss, server: hmxawpw7.epicgames.ink, port: 50015, cipher: aes-128-gcm, password: haMLMXirByn6rGVh, plugin: obfs, plugin-opts: { mode: http, host: 4d1d0422e857.microsoft.com }, tfo: true, udp: true }
-    - {name: "缅甸1", server: rotating.proxyempire.io, port: 9000, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}  # 更新的服务器信息
-    - {name: "缅甸2", server: rotating.proxyempire.io, port: 9001, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}  # 更新的服务器信息
-    - {name: "缅甸3", server: rotating.proxyempire.io, port: 9002, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}  # 更新的服务器信息
-    - {name: "缅甸4", server: rotating.proxyempire.io, port: 9003, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}  # 更新的服务器信息
-    - {name: "缅甸5", server: rotating.proxyempire.io, port: 9004, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}  # 更新的服务器信息
-    - {name: "缅甸6", server: rotating.proxyempire.io, port: 9005, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}  # 更新的服务器信息
-    - {name: "缅甸7", server: rotating.proxyempire.io, port: 9006, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;;yangon;yangon"}  # 更新的服务器信息
-    - {name: "myanmar+country+co.", server: rotating.proxyempire.io, port: 9007, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;myanmar+country+co.;yangon;yangon"}  # 更新的服务器信息
-    - {name: "frontiir+co.", server: rotating.proxyempire.io, port: 9008, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;frontiir+co.;yangon;yangon"}  # 更新的服务器信息
-    - {name: "welink", server: rotating.proxyempire.io, port: 9000, type: socks5, username: "j2MmYnevaj6pyVdL", password: "wifi;mm;welink;yangon;yangon"}  # 更新的服务器信息
+  # 缅甸WiFi线路 1-5
+  - {name: "缅甸1", 
+     server: 106.75.152.119, 
+     port: 1000, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-1ba21e", 
+     password: "wifi-mm--yangon-yangon"}
+  - {name: "缅甸2", 
+     server: 106.75.152.119, 
+     port: 1001, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-ad7274", 
+     password: "wifi-mm--yangon-yangon"}
+  - {name: "缅甸3", 
+     server: 106.75.152.119, 
+     port: 1002, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-be2df0", 
+     password: "wifi-mm--yangon-yangon"}
+  - {name: "缅甸4", 
+     server: 106.75.152.119, 
+     port: 1003, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-7afd35", 
+     password: "wifi-mm--yangon-yangon"}
+  - {name: "缅甸5", 
+     server: 106.75.152.119, 
+     port: 1004, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-a0d58f", 
+     password: "wifi-mm--yangon-yangon"}
+  
+  # 缅甸移动线路 6-10
+  - {name: "缅甸6", 
+     server: 106.75.152.119, 
+     port: 1005, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-5f9541", 
+     password: "mobile-mm--yangon-yangon"}
+  - {name: "缅甸7", 
+     server: 106.75.152.119, 
+     port: 1006, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-f0843c", 
+     password: "mobile-mm--yangon-yangon"}
+  - {name: "缅甸8", 
+     server: 106.75.152.119, 
+     port: 1007, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-e32aa3", 
+     password: "mobile-mm--yangon-yangon"}
+  - {name: "缅甸9", 
+     server: 106.75.152.119, 
+     port: 1008, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-d98f5e", 
+     password: "mobile-mm--yangon-yangon"}
+  - {name: "缅甸10", 
+     server: 106.75.152.119, 
+     port: 1009, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-120007", 
+     password: "mobile-mm--yangon-yangon"}
+
+# 代理提供者配置
+proxy-providers:
+  机场:
+    type: http
+    url: https://huaikhwang.central-world.org/api/v1/trails/bolster?token=bc1e37a26d87fe87242cc3925ae0e9b4
+    path: ./proxy_provider/jc.yaml
+    udp: false
+    health-check:
+      enable: true
+      interval: 600               # 健康检查间隔(秒)
+      url: http://www.gstatic.com/generate_204
 
 # 代理组配置
 proxy-groups:
-  # 主线路组（机场代理）
-  - name: 机场代理
+  # 主要代理选择组
+  - name: 主线路
     type: select
     proxies:
-      - '🇭🇰 香港 01丨1x HK'
-      - '🇭🇰 香港 02丨1x HK'
-      - '🇭🇰 香港 03丨1x HK'
-      - '🇭🇰 香港家宽 01丨1x HK'
-      - '🇭🇰 香港家宽 02丨1x HK'
-      - '🇭🇰 香港家宽 03丨1x HK'
-      - '🇭🇰 香港家宽 04丨3x HK'
-      - '🇭🇰 香港家宽 05丨3x HK'
-      - '🇭🇰 香港游戏丨2x HK'
-      - '🇲🇴 澳门家宽 01丨5x MO'
-      - '🇲🇴 澳门家宽 02丨5x MO'
-      - '🇹🇼 台湾 01丨1x TW'
-      - '🇹🇼 台湾 02丨1x TW'
-      - '🇹🇼 台湾 03丨1x TW'
-      - '🇸🇬 新加坡 01丨1x SG'
-      - '🇸🇬 新加坡 02丨1x SG'
-      - '🇸🇬 新加坡 03丨1x SG'
-      - '🇸🇬 新加坡家宽 01丨3x SG'
-      - '🇸🇬 新加坡家宽 02丨3x SG'
-      - '🇸🇬 新加坡家宽 03丨3x SG'
-      - '🇸🇬 新加坡家宽 04丨3x SG'
-      - '🇲🇾 马来西亚家宽 01丨1x MY'
-      - '🇲🇾 马来西亚家宽 02丨1x MY'
-      - '🇰🇭 柬埔寨丨3x KH'
-      - '🇹🇭 泰国丨3x TH'
-      - '🇲🇲 缅甸丨10x MM'
-      - '🇱🇦 老挝丨5x LA'
-      - '🇻🇳 越南丨1x VN'
-      - '🇻🇳 越南家宽丨3x VN'
-      - '🇯🇵 日本 01丨1x JP'
-      - '🇯🇵 日本 02丨1x JP'
-      - '🇯🇵 日本 03丨1x JP'
-      - '🇯🇵 日本 04丨3x JP'
-      - '🇯🇵 日本家宽 01丨3x JP'
-      - '🇯🇵 日本家宽 02丨3x JP'
-      - '🇯🇵 日本家宽 03丨3x JP'
-      - '🇯🇵 日本家宽 04丨3x JP'
-      - '🇯🇵 日本家宽 05丨3x JP'
+      - DIRECT                    # 直连
+      - 谷歌分流                  # Google服务代理组
+    use:
+      - 机场                      # 使用机场订阅
+    disable-udp: true
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
 
-  # 缅甸代理组（通过机场中转）
+  # Google服务代理组
+  - name: 谷歌分流
+    type: select
+    proxies:
+      - Play                      # Play商店专用代理组
+      - REJECT                    # 拒绝连接
+    disable-udp: false
+    health-check:
+      enable: false
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+  # Play商店专用代理组
   - name: Play
-    type: select
-    proxies:
-      - 缅甸线路
-
-  # 缅甸线路选择组
-  - name: 缅甸线路
     type: select
     proxies:
       - 缅甸1
@@ -127,35 +123,25 @@ proxy-groups:
       - 缅甸5
       - 缅甸6
       - 缅甸7
-      - myanmar+country+co.
-      - frontiir+co.
-      - welink
+      - 缅甸8
+      - 缅甸9
+      - 缅甸10
+      
+    disable-udp: false
+    health-check:
+      enable: false
+      interval: 600
+      url: http://www.gstatic.com/generate_204
 
-# 规则配置
+# 分流规则
 rules:
-  # Google Play 相关服务
-  - DOMAIN,play.googleapis.com,Play
-  - DOMAIN,myaccount.google.com,Play
-  - DOMAIN-KEYWORD,accounts.google.com,Play
-  - DOMAIN,play-fe.googleapis.com,Play
-  - DOMAIN,sspanel.net,Play
-  - DOMAIN,payments-pa.googleapis.com,Play
+  # Google Play相关服务
+  - DOMAIN,play.googleapis.com,谷歌分流
+  - DOMAIN,myaccount.google.com,谷歌分流
+  - DOMAIN-KEYWORD,accounts.google.com,谷歌分流
+  - DOMAIN,play-fe.googleapis.com,谷歌分流
+  - DOMAIN,sspanel.net,谷歌分流
+  - DOMAIN,payments-pa.googleapis.com,谷歌分流
   
-  # IP 检测网站
-  - DOMAIN-SUFFIX,ip.sb,Play
-  - DOMAIN-SUFFIX,ipip.net,Play
-  - DOMAIN-SUFFIX,ip138.com,Play
-  - DOMAIN,ip.chinaz.com,Play
-  - DOMAIN,whatismyip.com,Play
-  - DOMAIN,api.ip.sb,Play
-  - DOMAIN-SUFFIX,whatismyaddress.app,Play
-  - DOMAIN,whatismyaddress.app,Play
-  - DOMAIN-SUFFIX,ip2location.com,Play
-  - DOMAIN,ip2location.com,Play
-  - DOMAIN-SUFFIX,ipapi.co,Play
-  - DOMAIN-SUFFIX,ip-api.com,Play
-  - DOMAIN-SUFFIX,ipleak.net,Play
-  - DOMAIN-SUFFIX,browserleaks.com,Play
-
-  # 所有其他流量默认走机场代理
-  - MATCH,机场代理
+  # 未匹配流量默认使用主线路
+  - MATCH,主线路
