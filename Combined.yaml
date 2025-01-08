@@ -42,103 +42,135 @@ proxy-groups:
       url: http://www.gstatic.com/generate_204
 # 规则配置
 rules:
-  # Google Play 相关服务
-  - DOMAIN,play.googleapis.com,缅甸线路
-  - DOMAIN,myaccount.google.com,缅甸线路
-  - DOMAIN-KEYWORD,accounts.google.com,缅甸线路
-  - DOMAIN,play-fe.googleapis.com,缅甸线路
-  - DOMAIN,sspanel.net,缅甸线路
-  - DOMAIN,payments-pa.googleapis.com,缅甸线路
-  - IP-CIDR,208.95.112.1/32,缅甸线路
-  - DOMAIN,ip-api.com,缅甸线路
-  - DOMAIN,ip.skk.moe,缅甸线路
-  - DOMAIN-SUFFIX,ipapi.co,缅甸线路
-  - DOMAIN-SUFFIX,ip-api.com,缅甸线路
-  - DOMAIN-SUFFIX,api.ip.sb,缅甸线路
-  - DOMAIN-SUFFIX,IPInfo.io,缅甸线路
-  - DOMAIN-SUFFIX,ipip.net,缅甸线路
-  - DOMAIN-SUFFIX,skk.moe,缅甸线路
-  - DOMAIN,play-fe.googleapis.com,缅甸线路
-  - DOMAIN,play.googleapis.com,缅甸线路
-  - IP-CIDR,172.217.160.110/32,缅甸线路
-  - IP-CIDR,172.217.163.46/32,缅甸线路
-  - IP-CIDR,172.217.160.78/32,缅甸线路
-  - IP-CIDR,142.251.42.238/32,缅甸线路
-  - IP-CIDR,142.251.43.14/32,缅甸线路
-  - IP-CIDR,142.251.220.77/32,缅甸线路
-  - IP-CIDR,142.251.42.237/32,缅甸线路
-  - IP-CIDR,172.217.163.45/32,缅甸线路
-  - IP-CIDR,142.250.204.78/32,缅甸线路
-  - IP-CIDR,142.250.66.142/32,缅甸线路
-  # IP 检测网站
-  - DOMAIN-SUFFIX,ip.sb,缅甸线路
-  - DOMAIN-SUFFIX,ipip.net,缅甸线路
-  - DOMAIN-SUFFIX,ip138.com,缅甸线路
-  - DOMAIN,ip.chinaz.com,缅甸线路
-  - DOMAIN,whatismyip.com,缅甸线路
-  - DOMAIN,api.ip.sb,缅甸线路
-  - DOMAIN-SUFFIX,whatismyaddress.app,缅甸线路
-  - DOMAIN,whatismyaddress.app,缅甸线路
-  - DOMAIN-SUFFIX,ip2location.com,缅甸线路
-  - DOMAIN,ip2location.com,缅甸线路
-  - DOMAIN-SUFFIX,ipapi.co,缅甸线路
-  - DOMAIN-SUFFIX,ip-api.com,缅甸线路
-  - DOMAIN-SUFFIX,ipleak.net,缅甸线路
-  - DOMAIN-SUFFIX,browserleaks.com,缅甸线路
-  #No resolve
-  - DOMAIN-KEYWORD,youtube,no-resolve
-  - DOMAIN-SUFFIX,youtu.be,no-resolve
-  - DOMAIN-SUFFIX,googlevideo.com,no-resolve
-  - DOMAIN-SUFFIX,ytimg.com,no-resolve
-  - DOMAIN-SUFFIX,ggpht.com,no-resolve
-  - DOMAIN-SUFFIX,gvt2.com,no-resolve
-  - IP-CIDR,172.217.0.0/16,no-resolve
-  - IP-CIDR,74.125.0.0/16,no-resolve
-  - IP-CIDR,64.233.160.0/19,no-resolve
-  - IP-CIDR,142.250.0.0/15,no-resolve
-  - IP-CIDR,216.58.192.0/18,no-resolve
-  - DOMAIN-KEYWORD,netflix,no-resolve
-  - DOMAIN-SUFFIX,fast.com,no-resolve
-  - DOMAIN-SUFFIX,maying.co,no-resolve
-  - DOMAIN-SUFFIX,nflxext.com,no-resolve
-  - DOMAIN-SUFFIX,nflximg.com,no-resolve
-  - DOMAIN-SUFFIX,nflximg.net,no-resolve
-  - DOMAIN-SUFFIX,nflxso.net,no-resolve
-  - DOMAIN-SUFFIX,nflxvideo.net,no-resolve
-  - IP-CIDR,23.246.0.0/18,no-resolve
-  - IP-CIDR,37.77.184.0/21,no-resolve
-  - IP-CIDR,45.57.0.0/17,no-resolve
-  - IP-CIDR,64.120.128.0/17,no-resolve
-  - IP-CIDR,66.197.128.0/17,no-resolve
-  - IP-CIDR,108.175.32.0/20,no-resolve
-  - IP-CIDR,192.173.64.0/18,no-resolve
-  - IP-CIDR,198.38.96.0/19,no-resolve
-  - IP-CIDR,198.45.48.0/20,no-resolve
-  - IP-CIDR,8.41.4.0/24,no-resolve
-  - IP-CIDR,69.53.224.0/19,no-resolve
-  - IP-CIDR,185.2.220.0/22,no-resolve
-  - IP-CIDR,185.9.188.0/22,no-resolve
-  - IP-CIDR,207.45.72.0/22,no-resolve
-  - IP-CIDR,208.75.76.0/22,no-resolve
-  - DOMAIN-SUFFIX,t.me,no-resolve
-  - DOMAIN-SUFFIX,tdesktop.com,no-resolve
-  - DOMAIN-SUFFIX,telegra.ph,no-resolve
-  - DOMAIN-SUFFIX,telegram.me,no-resolve
-  - DOMAIN-SUFFIX,telegram.org,no-resolve
-  - IP-CIDR,91.108.4.0/22,no-resolve
-  - IP-CIDR,91.108.8.0/22,no-resolve
-  - IP-CIDR,91.108.12.0/22,no-resolve
-  - IP-CIDR,91.108.16.0/22,no-resolve
-  - IP-CIDR,91.108.56.0/22,no-resolve
-  - IP-CIDR,91.108.56.0/23,no-resolve
-  - IP-CIDR,109.239.140.0/24,no-resolve
-  - IP-CIDR,149.154.160.0/20,no-resolve
-  - IP-CIDR,149.154.160.0/22,no-resolve
-  - IP-CIDR,149.154.164.0/22,no-resolve
-  - IP-CIDR,149.154.168.0/22,no-resolve
-  - IP-CIDR,149.154.172.0/22,no-resolve
-  - IP-CIDR6,2001:b28:f23d::/48,no-resolve
-  - IP-CIDR6,2001:b28:f23f::/48,no-resolve
-  - IP-CIDR6,2001:67c:4e8::/48,no-resolve
+  # === Google Play 核心服务 ===
+  - DOMAIN,play.googleapis.com,缅甸线路         # Google Play商店API
+  - DOMAIN,myaccount.google.com,缅甸线路       # Google账户管理页面
+  - DOMAIN-KEYWORD,accounts.google.com,缅甸线路 # Google账户登录验证
+  - DOMAIN,play-fe.googleapis.com,缅甸线路      # Google Play前端服务
+  - DOMAIN,sspanel.net,缅甸线路                # 机场面板服务
+  - DOMAIN,payments-pa.googleapis.com,缅甸线路  # Google支付服务
+  
+  # === Google Play 附加服务 ===
+  - DOMAIN,android.clients.google.com,缅甸线路  # Android设备服务
+  - DOMAIN,gstatic.com,缅甸线路                # Google静态资源
+  - DOMAIN,www.googleapis.com,缅甸线路          # Google API通用服务
+  - DOMAIN,gcm.googleapis.com,缅甸线路          # Google云消息传递
+  - DOMAIN,dl.google.com,缅甸线路              # Google下载服务
+  - DOMAIN,mtalk.google.com,缅甸线路           # Google推送服务
+  
+  # === IP地址检测服务 ===
+  - DOMAIN,ip-api.com,缅甸线路                 # IP地理位置查询服务
+  - DOMAIN,ip.skk.moe,缅甸线路                 # IP查询工具
+  - DOMAIN-SUFFIX,ipapi.co,缅甸线路            # IP地址信息查询API
+  - DOMAIN-SUFFIX,ip-api.com,缅甸线路          # IP地理位置查询服务
+  - DOMAIN-SUFFIX,api.ip.sb,缅甸线路           # IP.SB的API服务
+  - DOMAIN-SUFFIX,ipinfo.io,缅甸线路           # IP详细信息查询服务
+  - DOMAIN-SUFFIX,ipip.net,缅甸线路            # IPIP.NET的IP数据服务
+  - DOMAIN-SUFFIX,skk.moe,缅甸线路             # 个人IP查询工具网站
+
+  # === 系统更新和安全服务 ===
+  - DOMAIN,connectivitycheck.gstatic.com,缅甸线路 # 网络连接检查
+  - DOMAIN,connectivitycheck.android.com,缅甸线路 # Android连接检查
+  - DOMAIN,android.googleapis.com,缅甸线路        # Android系统服务
+  - DOMAIN,update.googleapis.com,缅甸线路         # 系统更新服务
+
+  # === Google服务器IP ===
+  - IP-CIDR,208.95.112.1/32,缅甸线路          # Google服务器IP
+  - IP-CIDR,172.217.160.110/32,缅甸线路       # Google服务器IP
+  - IP-CIDR,172.217.163.46/32,缅甸线路        # Google服务器IP
+  - IP-CIDR,172.217.160.78/32,缅甸线路        # Google服务器IP
+  - IP-CIDR,142.251.42.238/32,缅甸线路        # Google服务器IP
+  - IP-CIDR,142.251.43.14/32,缅甸线路         # Google服务器IP
+  - IP-CIDR,142.251.220.77/32,缅甸线路        # Google服务器IP
+  - IP-CIDR,142.251.42.237/32,缅甸线路        # Google服务器IP
+  - IP-CIDR,172.217.163.45/32,缅甸线路        # Google服务器IP
+
+  # === 其他必要服务 ===
+  - DOMAIN-SUFFIX,gvt1.com,缅甸线路            # Google视频服务
+  - DOMAIN-SUFFIX,gvt2.com,缅甸线路            # Google视频服务
+  - DOMAIN-SUFFIX,googlevideo.com,缅甸线路     # Google视频内容分发
+  - DOMAIN-SUFFIX,gstatic.cn,缅甸线路          # Google中国静态资源
+
+  # === IP 检测网站 ===
+  - DOMAIN-SUFFIX,ip.sb,缅甸线路                # IP.SB查询服务
+  - DOMAIN-SUFFIX,ipip.net,缅甸线路             # IPIP.NET IP数据库
+  - DOMAIN-SUFFIX,ip138.com,缅甸线路            # IP138查询网站
+  - DOMAIN,ip.chinaz.com,缅甸线路               # 站长之家IP查询
+  - DOMAIN,whatismyip.com,缅甸线路              # What Is My IP查询
+  - DOMAIN,api.ip.sb,缅甸线路                   # IP.SB API服务
+  - DOMAIN-SUFFIX,whatismyaddress.app,缅甸线路  # IP地址查询应用
+  - DOMAIN,whatismyaddress.app,缅甸线路         # IP地址查询应用
+  - DOMAIN-SUFFIX,ip2location.com,缅甸线路      # IP2Location数据库
+  - DOMAIN,ip2location.com,缅甸线路             # IP2Location查询
+  - DOMAIN-SUFFIX,ipapi.co,缅甸线路             # IP API查询服务
+  - DOMAIN-SUFFIX,ip-api.com,缅甸线路           # IP-API地理位置查询
+  - DOMAIN-SUFFIX,ipleak.net,缅甸线路           # IP泄露检测
+  - DOMAIN-SUFFIX,browserleaks.com,缅甸线路     # 浏览器信息泄露检测
+
+  # === YouTube相关服务 (no-resolve) ===
+  - DOMAIN-KEYWORD,youtube,no-resolve           # YouTube主域名
+  - DOMAIN-SUFFIX,youtu.be,no-resolve          # YouTube短链接
+  - DOMAIN-SUFFIX,googlevideo.com,no-resolve   # YouTube视频存储
+  - DOMAIN-SUFFIX,ytimg.com,no-resolve         # YouTube图片资源
+  - DOMAIN-SUFFIX,ggpht.com,no-resolve         # Google用户内容
+  - DOMAIN-SUFFIX,gvt2.com,no-resolve          # Google视频传输
+
+  # === Google IP段 (no-resolve) ===
+  - IP-CIDR,172.217.0.0/16,no-resolve         # Google服务器IP段
+  - IP-CIDR,74.125.0.0/16,no-resolve         # Google服务器IP段
+  - IP-CIDR,64.233.160.0/19,no-resolve       # Google服务器IP段
+  - IP-CIDR,142.250.0.0/15,no-resolve        # Google服务器IP段
+  - IP-CIDR,216.58.192.0/18,no-resolve       # Google服务器IP段
+
+  # === Netflix相关服务 (no-resolve) ===
+  - DOMAIN-KEYWORD,netflix,no-resolve          # Netflix主域名
+  - DOMAIN-SUFFIX,fast.com,no-resolve         # Netflix速度测试
+  - DOMAIN-SUFFIX,maying.co,no-resolve        # Netflix相关服务
+  - DOMAIN-SUFFIX,nflxext.com,no-resolve      # Netflix扩展服务
+  - DOMAIN-SUFFIX,nflximg.com,no-resolve      # Netflix图片资源
+  - DOMAIN-SUFFIX,nflximg.net,no-resolve      # Netflix图片资源
+  - DOMAIN-SUFFIX,nflxso.net,no-resolve       # Netflix登录服务
+  - DOMAIN-SUFFIX,nflxvideo.net,no-resolve    # Netflix视频服务
+
+  # === Netflix IP段 (no-resolve) ===
+  - IP-CIDR,23.246.0.0/18,no-resolve         # Netflix CDN
+  - IP-CIDR,37.77.184.0/21,no-resolve        # Netflix CDN
+  - IP-CIDR,45.57.0.0/17,no-resolve          # Netflix CDN
+  - IP-CIDR,64.120.128.0/17,no-resolve       # Netflix CDN
+  - IP-CIDR,66.197.128.0/17,no-resolve       # Netflix CDN
+  - IP-CIDR,108.175.32.0/20,no-resolve       # Netflix CDN
+  - IP-CIDR,192.173.64.0/18,no-resolve       # Netflix CDN
+  - IP-CIDR,198.38.96.0/19,no-resolve        # Netflix CDN
+  - IP-CIDR,198.45.48.0/20,no-resolve        # Netflix CDN
+  - IP-CIDR,8.41.4.0/24,no-resolve           # Netflix CDN
+  - IP-CIDR,69.53.224.0/19,no-resolve        # Netflix CDN
+  - IP-CIDR,185.2.220.0/22,no-resolve        # Netflix CDN
+  - IP-CIDR,185.9.188.0/22,no-resolve        # Netflix CDN
+  - IP-CIDR,207.45.72.0/22,no-resolve        # Netflix CDN
+  - IP-CIDR,208.75.76.0/22,no-resolve        # Netflix CDN
+
+  # === Telegram相关服务 (no-resolve) ===
+  - DOMAIN-SUFFIX,t.me,no-resolve             # Telegram网页版
+  - DOMAIN-SUFFIX,tdesktop.com,no-resolve     # Telegram桌面客户端
+  - DOMAIN-SUFFIX,telegra.ph,no-resolve       # Telegram文章平台
+  - DOMAIN-SUFFIX,telegram.me,no-resolve      # Telegram短链接
+  - DOMAIN-SUFFIX,telegram.org,no-resolve     # Telegram官网
+
+  # === Telegram IP段 (no-resolve) ===
+  - IP-CIDR,91.108.4.0/22,no-resolve         # Telegram服务器
+  - IP-CIDR,91.108.8.0/22,no-resolve         # Telegram服务器
+  - IP-CIDR,91.108.12.0/22,no-resolve        # Telegram服务器
+  - IP-CIDR,91.108.16.0/22,no-resolve        # Telegram服务器
+  - IP-CIDR,91.108.56.0/22,no-resolve        # Telegram服务器
+  - IP-CIDR,91.108.56.0/23,no-resolve        # Telegram服务器
+  - IP-CIDR,109.239.140.0/24,no-resolve      # Telegram服务器
+  - IP-CIDR,149.154.160.0/20,no-resolve      # Telegram服务器
+  - IP-CIDR,149.154.160.0/22,no-resolve      # Telegram服务器
+  - IP-CIDR,149.154.164.0/22,no-resolve      # Telegram服务器
+  - IP-CIDR,149.154.168.0/22,no-resolve      # Telegram服务器
+  - IP-CIDR,149.154.172.0/22,no-resolve      # Telegram服务器
+  - IP-CIDR6,2001:b28:f23d::/48,no-resolve   # Telegram IPv6
+  - IP-CIDR6,2001:b28:f23f::/48,no-resolve   # Telegram IPv6
+  - IP-CIDR6,2001:67c:4e8::/48,no-resolve    # Telegram IPv6
   # 所有其他流量默认走缅甸线路
   - MATCH,DIRECT
