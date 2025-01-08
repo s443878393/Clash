@@ -49,27 +49,27 @@ rules:
   - DOMAIN,play-fe.googleapis.com,缅甸线路
   - DOMAIN,sspanel.net,缅甸线路
   - DOMAIN,payments-pa.googleapis.com,缅甸线路
-  - IP-CIDR,208.95.112.1/32,缅甸路线
-  - DOMAIN,ip-api.com,缅甸路线
-  - DOMAIN,ip.skk.moe,缅甸路线
-  - DOMAIN-SUFFIX,ipapi.co,缅甸路线
-  - DOMAIN-SUFFIX,ip-api.com,缅甸路线
-  - DOMAIN-SUFFIX,api.ip.sb,缅甸路线
-  - DOMAIN-SUFFIX,IPInfo.io,缅甸路线
-  - DOMAIN-SUFFIX,ipip.net,缅甸路线
-  - DOMAIN-SUFFIX,skk.moe,缅甸路线
-  - DOMAIN,play-fe.googleapis.com,缅甸路线
-  - DOMAIN,play.googleapis.com,缅甸路线
-  - IP-CIDR,172.217.160.110/32,缅甸路线
-  - IP-CIDR,172.217.163.46/32,缅甸路线
-  - IP-CIDR,172.217.160.78/32,缅甸路线
-  - IP-CIDR,142.251.42.238/32,缅甸路线
-  - IP-CIDR,142.251.43.14/32,缅甸路线
-  - IP-CIDR,142.251.220.77/32,缅甸路线
-  - IP-CIDR,142.251.42.237/32,缅甸路线
-  - IP-CIDR,172.217.163.45/32,缅甸路线
-  - IP-CIDR,142.250.204.78/32,缅甸路线
-  - IP-CIDR,142.250.66.142/32,缅甸路线
+  - IP-CIDR,208.95.112.1/32,缅甸线路
+  - DOMAIN,ip-api.com,缅甸线路
+  - DOMAIN,ip.skk.moe,缅甸线路
+  - DOMAIN-SUFFIX,ipapi.co,缅甸线路
+  - DOMAIN-SUFFIX,ip-api.com,缅甸线路
+  - DOMAIN-SUFFIX,api.ip.sb,缅甸线路
+  - DOMAIN-SUFFIX,IPInfo.io,缅甸线路
+  - DOMAIN-SUFFIX,ipip.net,缅甸线路
+  - DOMAIN-SUFFIX,skk.moe,缅甸线路
+  - DOMAIN,play-fe.googleapis.com,缅甸线路
+  - DOMAIN,play.googleapis.com,缅甸线路
+  - IP-CIDR,172.217.160.110/32,缅甸线路
+  - IP-CIDR,172.217.163.46/32,缅甸线路
+  - IP-CIDR,172.217.160.78/32,缅甸线路
+  - IP-CIDR,142.251.42.238/32,缅甸线路
+  - IP-CIDR,142.251.43.14/32,缅甸线路
+  - IP-CIDR,142.251.220.77/32,缅甸线路
+  - IP-CIDR,142.251.42.237/32,缅甸线路
+  - IP-CIDR,172.217.163.45/32,缅甸线路
+  - IP-CIDR,142.250.204.78/32,缅甸线路
+  - IP-CIDR,142.250.66.142/32,缅甸线路
   # IP 检测网站
   - DOMAIN-SUFFIX,ip.sb,缅甸线路
   - DOMAIN-SUFFIX,ipip.net,缅甸线路
