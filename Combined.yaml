@@ -85,6 +85,60 @@ rules:
   - DOMAIN-SUFFIX,ip-api.com,缅甸线路
   - DOMAIN-SUFFIX,ipleak.net,缅甸线路
   - DOMAIN-SUFFIX,browserleaks.com,缅甸线路
-
+  #No resolve
+  - DOMAIN-KEYWORD,youtube,no-resolve
+  - DOMAIN-SUFFIX,youtu.be,no-resolve
+  - DOMAIN-SUFFIX,googlevideo.com,no-resolve
+  - DOMAIN-SUFFIX,ytimg.com,no-resolve
+  - DOMAIN-SUFFIX,ggpht.com,no-resolve
+  - DOMAIN-SUFFIX,gvt2.com,no-resolve
+  - IP-CIDR,172.217.0.0/16,no-resolve
+  - IP-CIDR,74.125.0.0/16,no-resolve
+  - IP-CIDR,64.233.160.0/19,no-resolve
+  - IP-CIDR,142.250.0.0/15,no-resolve
+  - IP-CIDR,216.58.192.0/18,no-resolve
+  - DOMAIN-KEYWORD,netflix,no-resolve
+  - DOMAIN-SUFFIX,fast.com,no-resolve
+  - DOMAIN-SUFFIX,maying.co,no-resolve
+  - DOMAIN-SUFFIX,nflxext.com,no-resolve
+  - DOMAIN-SUFFIX,nflximg.com,no-resolve
+  - DOMAIN-SUFFIX,nflximg.net,no-resolve
+  - DOMAIN-SUFFIX,nflxso.net,no-resolve
+  - DOMAIN-SUFFIX,nflxvideo.net,no-resolve
+  - IP-CIDR,23.246.0.0/18,no-resolve
+  - IP-CIDR,37.77.184.0/21,no-resolve
+  - IP-CIDR,45.57.0.0/17,no-resolve
+  - IP-CIDR,64.120.128.0/17,no-resolve
+  - IP-CIDR,66.197.128.0/17,no-resolve
+  - IP-CIDR,108.175.32.0/20,no-resolve
+  - IP-CIDR,192.173.64.0/18,no-resolve
+  - IP-CIDR,198.38.96.0/19,no-resolve
+  - IP-CIDR,198.45.48.0/20,no-resolve
+  - IP-CIDR,8.41.4.0/24,no-resolve
+  - IP-CIDR,69.53.224.0/19,no-resolve
+  - IP-CIDR,185.2.220.0/22,no-resolve
+  - IP-CIDR,185.9.188.0/22,no-resolve
+  - IP-CIDR,207.45.72.0/22,no-resolve
+  - IP-CIDR,208.75.76.0/22,no-resolve
+  - DOMAIN-SUFFIX,t.me,no-resolve
+  - DOMAIN-SUFFIX,tdesktop.com,no-resolve
+  - DOMAIN-SUFFIX,telegra.ph,no-resolve
+  - DOMAIN-SUFFIX,telegram.me,no-resolve
+  - DOMAIN-SUFFIX,telegram.org,no-resolve
+  - IP-CIDR,91.108.4.0/22,no-resolve
+  - IP-CIDR,91.108.8.0/22,no-resolve
+  - IP-CIDR,91.108.12.0/22,no-resolve
+  - IP-CIDR,91.108.16.0/22,no-resolve
+  - IP-CIDR,91.108.56.0/22,no-resolve
+  - IP-CIDR,91.108.56.0/23,no-resolve
+  - IP-CIDR,109.239.140.0/24,no-resolve
+  - IP-CIDR,149.154.160.0/20,no-resolve
+  - IP-CIDR,149.154.160.0/22,no-resolve
+  - IP-CIDR,149.154.164.0/22,no-resolve
+  - IP-CIDR,149.154.168.0/22,no-resolve
+  - IP-CIDR,149.154.172.0/22,no-resolve
+  - IP-CIDR6,2001:b28:f23d::/48,no-resolve
+  - IP-CIDR6,2001:b28:f23f::/48,no-resolve
+  - IP-CIDR6,2001:67c:4e8::/48,no-resolve
   # 所有其他流量默认走缅甸线路
   - MATCH,DIRECT
