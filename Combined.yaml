@@ -54,8 +54,7 @@ rules:
   - DOMAIN,android.clients.google.com,缅甸线路  # Android设备服务
   - DOMAIN,gstatic.com,缅甸线路                # Google静态资源
   - DOMAIN,www.googleapis.com,缅甸线路          # Google API通用服务
-  - DOMAIN,gcm.googleapis.com,缅甸线路          # Google云消息传递
-  - DOMAIN,dl.google.com,缅甸线路              # Google下载服务
+  - DOMAIN,gcm.googleapis.com,缅甸线路          # Google云消息传递              # Google下载服务
   - DOMAIN,mtalk.google.com,缅甸线路           # Google推送服务
   
   # === IP地址检测服务 ===
@@ -67,12 +66,6 @@ rules:
   - DOMAIN-SUFFIX,ipinfo.io,缅甸线路           # IP详细信息查询服务
   - DOMAIN-SUFFIX,ipip.net,缅甸线路            # IPIP.NET的IP数据服务
   - DOMAIN-SUFFIX,skk.moe,缅甸线路             # 个人IP查询工具网站
-
-  # === 系统更新和安全服务 ===
-  - DOMAIN,connectivitycheck.gstatic.com,缅甸线路 # 网络连接检查
-  - DOMAIN,connectivitycheck.android.com,缅甸线路 # Android连接检查
-  - DOMAIN,android.googleapis.com,缅甸线路        # Android系统服务
-  - DOMAIN,update.googleapis.com,缅甸线路         # 系统更新服务
 
   # === Google服务器IP ===
   - IP-CIDR,208.95.112.1/32,缅甸线路          # Google服务器IP
