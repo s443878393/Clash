@@ -50,12 +50,7 @@ rules:
   - DOMAIN,sspanel.net,缅甸线路                # 机场面板服务
   - DOMAIN,payments-pa.googleapis.com,缅甸线路  # Google支付服务
   
-  # === Google Play 附加服务 ===
-  - DOMAIN,android.clients.google.com,缅甸线路  # Android设备服务
-  - DOMAIN,gstatic.com,缅甸线路                # Google静态资源
-  - DOMAIN,www.googleapis.com,缅甸线路          # Google API通用服务
-  - DOMAIN,gcm.googleapis.com,缅甸线路          # Google云消息传递              # Google下载服务
-  - DOMAIN,mtalk.google.com,缅甸线路           # Google推送服务
+           # Google推送服务
   
   # === IP地址检测服务 ===
   - DOMAIN,ip-api.com,缅甸线路                 # IP地理位置查询服务
