@@ -73,11 +73,6 @@ rules:
   - IP-CIDR,142.251.42.237/32,缅甸线路        # Google服务器IP
   - IP-CIDR,172.217.163.45/32,缅甸线路        # Google服务器IP
 
-  # === 其他必要服务 ===
-  - DOMAIN-SUFFIX,gvt1.com,缅甸线路            # Google视频服务
-  - DOMAIN-SUFFIX,gvt2.com,缅甸线路            # Google视频服务
-  - DOMAIN-SUFFIX,googlevideo.com,缅甸线路     # Google视频内容分发
-  - DOMAIN-SUFFIX,gstatic.cn,缅甸线路          # Google中国静态资源
 
   # === IP 检测网站 ===
   - DOMAIN-SUFFIX,ip.sb,缅甸线路                # IP.SB查询服务
