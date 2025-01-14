@@ -96,7 +96,7 @@ proxy-groups:
       - 谷歌分流                  # Google服务代理组
     use:
       - 机场                      # 使用机场订阅
-    disable-udp: true
+    disable-udp: false
     health-check:
       enable: true
       interval: 600
