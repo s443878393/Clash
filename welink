@@ -145,20 +145,8 @@ rules:
   - DOMAIN,sspanel.net,谷歌分流
   - DOMAIN,payments-pa.googleapis.com,谷歌分流
     # === IP 检测网站 ===
-  - DOMAIN-SUFFIX,ip.sb,缅甸线路                # IP.SB查询服务
-  - DOMAIN-SUFFIX,ipip.net,缅甸线路             # IPIP.NET IP数据库
-  - DOMAIN-SUFFIX,ip138.com,缅甸线路            # IP138查询网站
-  - DOMAIN,ip.chinaz.com,缅甸线路               # 站长之家IP查询
-  - DOMAIN,whatismyip.com,缅甸线路              # What Is My IP查询
-  - DOMAIN,api.ip.sb,缅甸线路                   # IP.SB API服务
-  - DOMAIN-SUFFIX,whatismyaddress.app,缅甸线路  # IP地址查询应用
-  - DOMAIN,whatismyaddress.app,缅甸线路         # IP地址查询应用
-  - DOMAIN-SUFFIX,ip2location.com,缅甸线路      # IP2Location数据库
-  - DOMAIN,ip2location.com,缅甸线路             # IP2Location查询
-  - DOMAIN-SUFFIX,ipapi.co,缅甸线路             # IP API查询服务
-  - DOMAIN-SUFFIX,ip-api.com,缅甸线路           # IP-API地理位置查询
-  - DOMAIN-SUFFIX,ipleak.net,缅甸线路           # IP泄露检测
-  - DOMAIN-SUFFIX,browserleaks.com,缅甸线路     # 浏览器信息泄露检测
-
+     # IP地址查询应用
+  - DOMAIN-SUFFIX,ip2location.com,谷歌分流      # IP2Location数据库
+  - DOMAIN,ip2location.com,谷歌分流             # IP2Location查询
   # 未匹配流量默认使用主线路
   - MATCH,主线路
