@@ -1,0 +1,171 @@
+# 基础配置
+port: 7890                      # HTTP代理端口
+socks-port: 7891               # SOCKS5代理端口
+allow-lan: true                # 允许局域网访问
+mode: Rule                     # 规则模式：Rule/Global/Direct
+log-level: info                # 日志级别
+external-controller: 127.0.0.1:9090  # 外部控制器地址
+
+# 缅甸代理服务器列表
+proxies:
+  # 缅甸WiFi线路 1-5
+  - {name: "缅甸1", 
+     server: 34.141.129.232, 
+     port: 2000, 
+     type: socks5, 
+     username: "a42591314_1-country-mm-state-06-city-yangon", 
+     password: "2vaosh"}
+   - {name: "缅甸2", 
+     server: 34.141.129.232, 
+     port: 2000, 
+     type: socks5, 
+     username: "a42591314_2-country-mm-state-06-city-yangon", 
+     password: "2vaosh"}
+   - {name: "缅甸3", 
+     server: 34.141.129.232, 
+     port: 2000, 
+     type: socks5, 
+     username: "a42591314_3-country-mm-state-06-city-yangon", 
+     password: "2vaosh"}
+   - {name: "缅甸4", 
+     server: 34.141.129.232, 
+     port: 2000, 
+     type: socks5, 
+     username: "a42591314_4-country-mm-state-06-city-yangon", 
+     password: "2vaosh"}
+   - {name: "缅甸5", 
+     server: 34.141.129.232, 
+     port: 2000, 
+     type: socks5, 
+     username: "a42591314_5-country-mm-state-06-city-yangon", 
+     password: "2vaosh"}
+  
+  # 缅甸移动线路 6-10
+  - {name: "缅甸6", 
+     server: 34.141.129.232, 
+     port: 9005, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-5f9541", 
+     password: "mobile-mm--yangon-yangon"}
+  - {name: "缅甸7", 
+     server: 34.141.129.232, 
+     port: 9006, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-f0843c", 
+     password: "mobile-mm--yangon-yangon"}
+  - {name: "缅甸8", 
+     server: 34.141.129.232, 
+     port: 9007, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-e32aa3", 
+     password: "mobile;mm;ooredoo+myanmar;yangon;yangon"}
+ - {name: "缅甸9", 
+     server: 34.141.129.232, 
+     port: 9006, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-f0843c", 
+     password: "mobile-mm--yangon-yangon"}
+  - {name: "缅甸10", 
+     server: rotating.proxyempire.io, 
+     port: 9000, 
+     type: socks5, 
+     username: "KWXtZMO48lPfvzBD", 
+     password: "mobile;mm;ooredoo+myanmar;yangon;yangon"}
+
+# 代理组配置
+proxy-groups:
+  - name: 主线路
+    type: select
+    proxies:
+      - DIRECT
+      - 谷歌分流
+    disable-udp: false
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+  - name: 谷歌分流
+    type: select
+    proxies:
+      - Play
+      - REJECT
+    disable-udp: false
+    health-check:
+      enable: false
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+  - name: Play
+    type: select
+    proxies:
+      - 缅甸1
+      - 缅甸2
+      - 缅甸3
+      - 缅甸4
+      - 缅甸5
+      - 缅甸6
+      - 缅甸7
+      - 缅甸8
+      - 缅甸9
+      - 缅甸10
+    disable-udp: false
+    health-check:
+      enable: false
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+rules:
+  # Google Play相关服务
+  - DOMAIN,play.googleapis.com,谷歌分流
+  - DOMAIN,myaccount.google.com,谷歌分流
+  - DOMAIN-KEYWORD,accounts.google.com,谷歌分流
+  - DOMAIN,play-fe.googleapis.com,谷歌分流
+  - DOMAIN,sspanel.net,谷歌分流
+  - DOMAIN,payments-pa.googleapis.com,谷歌分流
+  
+  # === Google Play 附加服务 ===
+  - DOMAIN,android.clients.google.com,谷歌分流
+  - DOMAIN,gstatic.com,谷歌分流
+  - DOMAIN,www.googleapis.com,谷歌分流
+  - DOMAIN,gcm.googleapis.com,谷歌分流
+  - DOMAIN,dl.google.com,谷歌分流
+  - DOMAIN,mtalk.google.com,谷歌分流
+  - DOMAIN,play-lh.googleusercontent.com,谷歌分流
+  - DOMAIN,googleads.g.doubleclick.net,谷歌分流
+  
+  # === IP地址检测服务 ===
+  - DOMAIN,ip-api.com,谷歌分流
+  - DOMAIN,ip.skk.moe,谷歌分流
+  - DOMAIN-SUFFIX,ipapi.co,谷歌分流
+  - DOMAIN-SUFFIX,ip-api.com,谷歌分流
+  - DOMAIN-SUFFIX,api.ip.sb,谷歌分流
+  - DOMAIN-SUFFIX,ipinfo.io,谷歌分流
+  - DOMAIN-SUFFIX,ipip.net,谷歌分流
+  - DOMAIN-SUFFIX,skk.moe,谷歌分流
+  
+  # === 系统更新和安全服务 ===
+  - DOMAIN,connectivitycheck.gstatic.com,谷歌分流
+  - DOMAIN,connectivitycheck.android.com,谷歌分流
+  - DOMAIN,android.googleapis.com,谷歌分流
+  - DOMAIN,update.googleapis.com,谷歌分流
+  
+  # === Google服务器IP ===
+  - IP-CIDR,208.95.112.1/32,谷歌分流
+  - IP-CIDR,172.217.160.110/32,谷歌分流
+  - IP-CIDR,172.217.163.46/32,谷歌分流
+  - IP-CIDR,172.217.160.78/32,谷歌分流
+  - IP-CIDR,142.251.42.238/32,谷歌分流
+  - IP-CIDR,142.251.43.14/32,谷歌分流
+  - IP-CIDR,142.251.220.77/32,谷歌分流
+  - IP-CIDR,142.251.42.237/32,谷歌分流
+  - IP-CIDR,172.217.163.45/32,谷歌分流
+
+  # IP地址查询应用
+  - DOMAIN-SUFFIX,ip2location.com,谷歌分流
+  - DOMAIN,ip2location.com,谷歌分流
+  - DOMAIN-SUFFIX,gvt1.com,DIRECT
+  - DOMAIN-SUFFIX,gvt2.com,DIRECT
+  
+  # 未匹配流量默认使用主线路
+  - MATCH,主线路
