@@ -15,13 +15,13 @@ proxies:
      type: socks5, 
      username: "a42591314_1-country-mm-state-06-city-yangon", 
      password: "2vaosh"}
-   - {name: "缅甸2", 
+  - {name: "缅甸2", 
      server: 34.141.129.232, 
      port: 2000, 
      type: socks5, 
      username: "a42591314_2-country-mm-state-06-city-yangon", 
      password: "2vaosh"}
-   - {name: "缅甸3", 
+  - {name: "缅甸3", 
      server: 34.141.129.232, 
      port: 2000, 
      type: socks5, 
