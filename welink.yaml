@@ -1,0 +1,141 @@
+# 基础配置
+port: 7890                      # HTTP代理端口
+socks-port: 7891               # SOCKS5代理端口
+allow-lan: true                # 允许局域网访问
+mode: Rule                     # 规则模式：Rule/Global/Direct
+log-level: info                # 日志级别
+external-controller: 127.0.0.1:9090  # 外部控制器地址
+
+# 基础配置部分保持不变...
+
+# 缅甸代理服务器列表
+proxies:
+  # 缅甸WiFi线路 1-5
+  - {name: "缅甸1", 
+     server: 34.141.129.232, 
+     port: 9000, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-1ba21e", 
+     password: "wifi-mm--yangon-yangon"}
+  - {name: "缅甸2", 
+     server: 34.141.129.232, 
+     port: 9001, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-ad7274", 
+     password: "wifi-mm--yangon-yangon"}
+  - {name: "缅甸3", 
+     server: 34.141.129.232, 
+     port: 9002, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-be2df0", 
+     password: "wifi-mm--yangon-yangon"}
+  - {name: "缅甸4", 
+     server: 34.141.129.232, 
+     port: 9003, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-7afd35", 
+     password: "wifi-mm--yangon-yangon"}
+  - {name: "缅甸5", 
+     server: 34.141.129.232, 
+     port: 9004, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-a0d58f", 
+     password: "wifi-mm--yangon-yangon"}
+  
+  # 缅甸移动线路 6-10
+  - {name: "缅甸6", 
+     server: 34.141.129.232, 
+     port: 9005, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-5f9541", 
+     password: "mobile-mm--yangon-yangon"}
+  - {name: "缅甸7", 
+     server: 34.141.129.232, 
+     port: 9006, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-f0843c", 
+     password: "mobile-mm--yangon-yangon"}
+  - {name: "缅甸8", 
+     server: 34.141.129.232, 
+     port: 9007, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-e32aa3", 
+     password: "mobile-mm--yangon-yangon"}
+  - {name: "缅甸9", 
+     server: 34.141.129.232, 
+     port: 9008, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-d98f5e", 
+     password: "mobile-mm--yangon-yangon"}
+  - {name: "缅甸10", 
+     server: 34.141.129.232, 
+     port: 9009, 
+     type: socks5, 
+     username: "9ae3f480-d353c061-120007", 
+     password: "mobile-mm--yangon-yangon"}
+
+# 代理提供者配置
+
+# 代理组配置
+proxy-groups:
+  # 主要代理选择组
+  - name: 主线路
+    type: select
+    proxies:
+      - DIRECT                    # 直连
+      - 谷歌分流                  # Google服务代理组                 # 使用机场订阅
+    disable-udp: false
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+  # Google服务代理组
+  - name: 谷歌分流
+    type: select
+    proxies:
+      - Play                      # Play商店专用代理组
+      - REJECT                    # 拒绝连接
+    disable-udp: false
+    health-check:
+      enable: false
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+  # Play商店专用代理组
+  - name: Play
+    type: select
+    proxies:
+      - 缅甸1
+      - 缅甸2
+      - 缅甸3
+      - 缅甸4
+      - 缅甸5
+      - 缅甸6
+      - 缅甸7
+      - 缅甸8
+      - 缅甸9
+      - 缅甸10
+      
+    disable-udp: false
+    health-check:
+      enable: false
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+# 分流规则
+rules:
+  # Google Play相关服务
+  - DOMAIN,play.googleapis.com,谷歌分流
+  - DOMAIN,myaccount.google.com,谷歌分流
+  - DOMAIN-KEYWORD,accounts.google.com,谷歌分流
+  - DOMAIN,play-fe.googleapis.com,谷歌分流
+  - DOMAIN,sspanel.net,谷歌分流
+  - DOMAIN,payments-pa.googleapis.com,谷歌分流
+  # IP地址查询应用
+  - DOMAIN-SUFFIX,ip2location.com,谷歌分流      # IP2Location数据库
+  - DOMAIN,ip2location.com,谷歌分流             # IP2Location查询
+  - DOMAIN-SUFFIX,gvt1.com,DIRECT            # Google视频服务
+  - DOMAIN-SUFFIX,gvt2.com,DIRECT  
+  # 未匹配流量默认使用主线路
+  - MATCH,主线路
