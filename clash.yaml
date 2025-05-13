@@ -1,0 +1,69 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  nameserver:
+    - "2001:4860:4860::8888"  # Google IPv6 DNS
+    - "2001:4860:4860::8844"  # Google IPv6 DNS
+  fallback:
+    - "1.1.1.1"  # Cloudflare IPv4
+    - "1.0.0.1"  # Cloudflare IPv4
+    - "2606:4700:4700::1111"  # Cloudflare IPv6
+    - "2606:4700:4700::1001"  # Cloudflare IPv6
+
+proxies:
+  - name: MM01
+    type: socks5
+    server: 192.168.2.180
+    port: "1088"
+    udp: true
+    ipv6: true
+proxy-providers:
+          机场:
+            type: http
+            url: https://villa.parkson-market.org/api/v1/trails/bolster?token=71a882980a87a2467c7341a9c6a04d95
+            interval: 86400
+            path: ./proxy_provider/jc.yaml
+            udp: false
+            health-check:
+              enable: true
+              interval: 600
+              url: http://www.gstatic.com/generate_204
+proxy-groups:
+  - name: 主线路
+    proxies:
+      - DIRECT
+      - 谷歌分流
+    use:
+      - 机场
+    type: select
+    disable-udp: true
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  - name: 谷歌分流
+    proxies:
+      - MM01
+    type: select
+    disable-udp: false
+    health-check:
+      enable: false
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+rules:
+#  - AND,((NETWORK,UDP),(DOMAIN,play-fe.googleapis.com)),谷歌分流
+  - DOMAIN,play.googleapis.com,谷歌分流
+  - DOMAIN,myaccount.google.com,谷歌分流
+  - DOMAIN-KEYWORD,accounts.google.com,谷歌分流
+  - DOMAIN,play-fe.googleapis.com,谷歌分流
+  - DOMAIN,sspanel.net,谷歌分流
+  - DOMAIN,payments-pa.googleapis.com,谷歌分流
+  - MATCH,主线路
