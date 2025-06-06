@@ -1,0 +1,96 @@
+{
+    "inbounds": [
+       {
+         "tag": "api",
+         "listen": "127.0.0.1",
+         "port": 6666,
+         "protocol": "dokodemo-door",
+         "settings": {
+           "address": "127.0.0.1"
+         }
+       }
+     ],
+       "outbounds": [
+       {
+         "tag": "direct",
+         "protocol": "freedom",
+         "settings": {
+           "domainStrategy": "UseIP"
+         }
+       },
+       {
+         "tag": "blocked",
+         "protocol": "blackhole",
+         "settings": {}
+       },
+       {
+         "tag": "reverse-proxy",
+         "protocol": "shadowsocks",
+         "settings": {
+           "servers": [
+             {
+               "address": "94.103.5.229",
+               "port": 11220,
+               "password": "bMGWzP5pUXvPDZdB0g9mPFhW72eD/uIAbhae4sXaWCk=",
+               "method": "aes-128-gcm",
+               "uot": true
+             }
+           ]
+         },
+         "streamSettings": {
+           "network": "tcp",
+           "security": "none",
+           "tcpSettings": {
+             "header": {
+               "type": "none"
+             }
+           }
+         }
+       }
+     ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "type": "field",
+          "outboundTag": "blocked",
+          "ip": [
+            "geoip:private"
+          ]
+        },
+        {
+          "type": "field",
+          "outboundTag": "blocked",
+          "protocol": [
+            "bittorrent"
+          ]
+        },
+        {
+          "outboundTag": "reverse-proxy",
+          "inboundTag": [
+            "reverse-10"
+          ],
+          "domain": [
+            "full:reverse.xui10"
+          ],
+          "type": "field"
+        },
+        {
+          "outboundTag": "direct",
+          "inboundTag": [
+            "reverse-10"
+          ],
+          "type": "field"
+        }
+      ]
+    },
+    "reverse": {
+      "bridges": [
+        {
+          "tag": "reverse-10",
+          "domain": "reverse.xui10"
+        }
+      ]
+    }
+  }
+  
