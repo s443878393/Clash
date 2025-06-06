@@ -1,0 +1,96 @@
+{
+    "inbounds": [
+       {
+         "tag": "api",
+         "listen": "127.0.0.1",
+         "port": 6666,
+         "protocol": "dokodemo-door",
+         "settings": {
+           "address": "127.0.0.1"
+         }
+       }
+     ],
+       "outbounds": [
+       {
+         "tag": "direct",
+         "protocol": "freedom",
+         "settings": {
+           "domainStrategy": "UseIP"
+         }
+       },
+       {
+         "tag": "blocked",
+         "protocol": "blackhole",
+         "settings": {}
+       },
+       {
+         "tag": "reverse-proxy",
+         "protocol": "shadowsocks",
+         "settings": {
+           "servers": [
+             {
+               "address": "94.103.5.229",
+               "port": 11219,
+               "password": "LgbxScr7or6HHOiTFAy9s9rO4IbIfCC2d2OqoLjtiGc=",
+               "method": "aes-128-gcm",
+               "uot": true
+             }
+           ]
+         },
+         "streamSettings": {
+           "network": "tcp",
+           "security": "none",
+           "tcpSettings": {
+             "header": {
+               "type": "none"
+             }
+           }
+         }
+       }
+     ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "type": "field",
+          "outboundTag": "blocked",
+          "ip": [
+            "geoip:private"
+          ]
+        },
+        {
+          "type": "field",
+          "outboundTag": "blocked",
+          "protocol": [
+            "bittorrent"
+          ]
+        },
+        {
+          "outboundTag": "reverse-proxy",
+          "inboundTag": [
+            "reverse-9"
+          ],
+          "domain": [
+            "full:reverse.xui9"
+          ],
+          "type": "field"
+        },
+        {
+          "outboundTag": "direct",
+          "inboundTag": [
+            "reverse-9"
+          ],
+          "type": "field"
+        }
+      ]
+    },
+    "reverse": {
+      "bridges": [
+        {
+          "tag": "reverse-9",
+          "domain": "reverse.xui9"
+        }
+      ]
+    }
+  }
+  
