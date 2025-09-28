@@ -1,0 +1,96 @@
+{
+    "inbounds": [
+       {
+         "tag": "api",
+         "listen": "127.0.0.1",
+         "port": 6666,
+         "protocol": "dokodemo-door",
+         "settings": {
+           "address": "127.0.0.1"
+         }
+       }
+     ],
+       "outbounds": [
+       {
+         "tag": "direct",
+         "protocol": "freedom",
+         "settings": {
+           "domainStrategy": "UseIP"
+         }
+       },
+       {
+         "tag": "blocked",
+         "protocol": "blackhole",
+         "settings": {}
+       },
+       {
+         "tag": "reverse-proxy",
+         "protocol": "shadowsocks",
+         "settings": {
+           "servers": [
+             {
+               "address": "45.135.41.214",
+               "port": 11213,
+               "password": "A/scooEXGkFzrObdnHxE35BAIO+VxsbBCqMcHiDJhTE=",
+               "method": "aes-128-gcm",
+               "uot": true
+             }
+           ]
+         },
+         "streamSettings": {
+           "network": "tcp",
+           "security": "none",
+           "tcpSettings": {
+             "header": {
+               "type": "none"
+             }
+           }
+         }
+       }
+     ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "type": "field",
+          "outboundTag": "blocked",
+          "ip": [
+            "geoip:private"
+          ]
+        },
+        {
+          "type": "field",
+          "outboundTag": "blocked",
+          "protocol": [
+            "bittorrent"
+          ]
+        },
+        {
+          "outboundTag": "reverse-proxy",
+          "inboundTag": [
+            "reverse-3"
+          ],
+          "domain": [
+            "full:reverse.3"
+          ],
+          "type": "field"
+        },
+        {
+          "outboundTag": "direct",
+          "inboundTag": [
+            "reverse-3"
+          ],
+          "type": "field"
+        }
+      ]
+    },
+    "reverse": {
+      "bridges": [
+        {
+          "tag": "reverse-3",
+          "domain": "reverse.xui3"
+        }
+      ]
+    }
+  }
+  
