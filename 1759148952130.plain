@@ -1,0 +1,239 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+unified-delay: true
+sniffer:
+  sniff:
+    TLS: {ports: [1-65535], override-destination: true}
+    HTTP: {ports: [1-65535], override-destination: true}
+  enable: true
+  skip-domain:
+    - Mijia Cloud
+    - dlg.io.mi.com
+  parse-pure-ip: false
+  force-dns-mapping: true
+  override-destination: true
+dns:
+  ipv6: false
+  enable: true
+  listen: 0.0.0.0:1053
+  use-hosts: false
+  default-nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+    - 223.6.6.6
+  nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+    - 223.5.5.5
+  fake-ip-range: 198.18.0.1/15
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - "*.time.edu.cn"
+    - "*.ntp.org.cn"
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - stun.*.*
+    - stun.*.*.*
+    - swscan.apple.com
+    - mesu.apple.com
+    - music.163.com
+    - "*.music.163.com"
+    - "*.126.net"
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - "*.kuwo.cn"
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - y.qq.com
+    - "*.y.qq.com"
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - localhost.ptlogin2.qq.com
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - music.migu.cn
+    - +.wotgame.cn
+    - +.wggames.cn
+    - +.wowsgame.cn
+    - +.wargaming.net
+    - "*.*.*.srv.nintendo.net"
+    - "*.*.stun.playstation.net"
+    - xbox.*.*.microsoft.com
+    - "*.*.xboxlive.com"
+    - "*.ipv6.microsoft.com"
+    - teredo.*.*.*
+    - teredo.*.*
+    - speedtest.cros.wr.pvp.net
+    - +.jjvip8.com
+    - www.douyu.com
+    - activityapi.huya.com
+    - activityapi.huya.com.w.cdngslb.com
+    - www.bilibili.com
+    - api.bilibili.com
+    - a.w.bilicdn1.com
+proxies:
+  - {name: 当前流量:0.00G / 150.00G, server: c21b5bc.gylcxo.xyz, port: 18300, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 到期时间:2026-03-24, server: c21b5bc.gylcxo.xyz, port: 18300, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 01, server: c21b5bc.gylcxo.xyz, port: 18300, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 02, server: c21b5bc.gylcxo.xyz, port: 18305, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 03, server: c21b5bc.gylcxo.xyz, port: 18310, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 04, server: c21b5bc.gylcxo.xyz, port: 18315, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 05, server: 2e95e6e.jkwskh.xyz, port: 18320, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 06, server: 2e95e6e.jkwskh.xyz, port: 18325, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 07, server: 2e95e6e.jkwskh.xyz, port: 18330, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 08, server: 2e95e6e.jkwskh.xyz, port: 18335, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 09, server: 2e95e6e.jkwskh.xyz, port: 18340, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 10, server: c21b5bc.gylcxo.xyz, port: 18345, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 11, server: c21b5bc.gylcxo.xyz, port: 18350, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 12, server: c21b5bc.gylcxo.xyz, port: 18400, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 13, server: c21b5bc.gylcxo.xyz, port: 18405, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 14, server: c21b5bc.gylcxo.xyz, port: 18410, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 15, server: c21b5bc.gylcxo.xyz, port: 18415, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 16, server: c21b5bc.gylcxo.xyz, port: 18420, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 17, server: 2e95e6e.jkwskh.xyz, port: 18425, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 18, server: 2e95e6e.jkwskh.xyz, port: 18430, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 19, server: 2e95e6e.jkwskh.xyz, port: 18435, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 20, server: 2e95e6e.jkwskh.xyz, port: 18440, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇭🇰 香港 21, server: 2e95e6e.jkwskh.xyz, port: 18445, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇺🇸 美国 01, server: 83ac9bf.eicuhq.xyz, port: 18100, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇺🇸 美国 02, server: 83ac9bf.eicuhq.xyz, port: 18105, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇺🇸 美国 03, server: 83ac9bf.eicuhq.xyz, port: 18110, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇺🇸 美国 04, server: 83ac9bf.eicuhq.xyz, port: 18115, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇺🇸 美国 05, server: 83ac9bf.eicuhq.xyz, port: 18120, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇺🇸 美国 06, server: dde93ac.qbewux.xyz, port: 18125, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇺🇸 美国 07, server: dde93ac.qbewux.xyz, port: 18130, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇺🇸 美国 08, server: dde93ac.qbewux.xyz, port: 18135, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇺🇸 美国 09, server: dde93ac.qbewux.xyz, port: 18140, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇺🇸 美国 10, server: dde93ac.qbewux.xyz, port: 18145, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇺🇸 美国 11, server: dde93ac.qbewux.xyz, port: 18150, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇺🇸 美国 12, server: 83ac9bf.eicuhq.xyz, port: 18155, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇺🇸 美国 13, server: 83ac9bf.eicuhq.xyz, port: 18160, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇯🇵 日本 01, server: 83ac9bf.eicuhq.xyz, port: 18002, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇯🇵 日本 02, server: 83ac9bf.eicuhq.xyz, port: 18005, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇯🇵 日本 03, server: 83ac9bf.eicuhq.xyz, port: 18010, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇯🇵 日本 04, server: 83ac9bf.eicuhq.xyz, port: 18015, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇯🇵 日本 05, server: dde93ac.qbewux.xyz, port: 18020, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇯🇵 日本 06, server: dde93ac.qbewux.xyz, port: 18025, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇯🇵 日本 07, server: dde93ac.qbewux.xyz, port: 18030, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇯🇵 日本 08, server: dde93ac.qbewux.xyz, port: 18035, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇨🇳 台湾 01, server: c21b5bc.gylcxo.xyz, port: 18355, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇨🇳 台湾 02, server: c21b5bc.gylcxo.xyz, port: 18360, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇨🇳 台湾 03, server: 2e95e6e.jkwskh.xyz, port: 18365, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇨🇳 台湾 04, server: 2e95e6e.jkwskh.xyz, port: 18370, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇨🇳 台湾 05, server: c21b5bc.gylcxo.xyz, port: 18375, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇨🇳 台湾 06, server: c21b5bc.gylcxo.xyz, port: 18356, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇨🇳 台湾 07, server: c21b5bc.gylcxo.xyz, port: 18361, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇨🇳 台湾 08, server: 2e95e6e.jkwskh.xyz, port: 18366, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇨🇳 台湾 09, server: 2e95e6e.jkwskh.xyz, port: 18371, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇨🇳 台湾 10, server: 2e95e6e.jkwskh.xyz, port: 18376, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇸🇬 新加坡 01, server: c21b5bc.gylcxo.xyz, port: 18380, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇸🇬 新加坡 02, server: c21b5bc.gylcxo.xyz, port: 18385, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇸🇬 新加坡 03, server: 2e95e6e.jkwskh.xyz, port: 18390, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+  - {name: 🇸🇬 新加坡 04, server: 2e95e6e.jkwskh.xyz, port: 18395, type: ss, cipher: aes-128-gcm, password: f61634f14e6bfcaf, plugin: obfs, plugin-opts: {mode: http, host: Nx24zn0Gr3.microsoft.com}, udp: true, tfo: false}
+proxy-groups:
+  - name: Proxies
+    type: select
+    proxies:
+      - 当前流量:0.00G / 150.00G
+      - 到期时间:2026-03-24
+      - 🇭🇰 香港 01
+      - 🇭🇰 香港 02
+      - 🇭🇰 香港 03
+      - 🇭🇰 香港 04
+      - 🇭🇰 香港 05
+      - 🇭🇰 香港 06
+      - 🇭🇰 香港 07
+      - 🇭🇰 香港 08
+      - 🇭🇰 香港 09
+      - 🇭🇰 香港 10
+      - 🇭🇰 香港 11
+      - 🇭🇰 香港 12
+      - 🇭🇰 香港 13
+      - 🇭🇰 香港 14
+      - 🇭🇰 香港 15
+      - 🇭🇰 香港 16
+      - 🇭🇰 香港 17
+      - 🇭🇰 香港 18
+      - 🇭🇰 香港 19
+      - 🇭🇰 香港 20
+      - 🇭🇰 香港 21
+      - 🇺🇸 美国 01
+      - 🇺🇸 美国 02
+      - 🇺🇸 美国 03
+      - 🇺🇸 美国 04
+      - 🇺🇸 美国 05
+      - 🇺🇸 美国 06
+      - 🇺🇸 美国 07
+      - 🇺🇸 美国 08
+      - 🇺🇸 美国 09
+      - 🇺🇸 美国 10
+      - 🇺🇸 美国 11
+      - 🇺🇸 美国 12
+      - 🇺🇸 美国 13
+      - 🇯🇵 日本 01
+      - 🇯🇵 日本 02
+      - 🇯🇵 日本 03
+      - 🇯🇵 日本 04
+      - 🇯🇵 日本 05
+      - 🇯🇵 日本 06
+      - 🇯🇵 日本 07
+      - 🇯🇵 日本 08
+      - 🇨🇳 台湾 01
+      - 🇨🇳 台湾 02
+      - 🇨🇳 台湾 03
+      - 🇨🇳 台湾 04
+      - 🇨🇳 台湾 05
+      - 🇨🇳 台湾 06
+      - 🇨🇳 台湾 07
+      - 🇨🇳 台湾 08
+      - 🇨🇳 台湾 09
+      - 🇨🇳 台湾 10
+      - 🇸🇬 新加坡 01
+      - 🇸🇬 新加坡 02
+      - 🇸🇬 新加坡 03
+      - 🇸🇬 新加坡 04
+
+rule-providers:
+    ChinaMax: { type: http, behavior: classical, url: 'https://api-gz.hosbbq.com/nus74f89st1/C.yml', interval: 86400, path: ./ruleset/ChinaMax.yml }
+
+rules:
+    - RULE-SET,ChinaMax,DIRECT
+    - MATCH,Proxies
