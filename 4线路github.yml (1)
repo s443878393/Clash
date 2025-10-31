@@ -1,0 +1,112 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  nameserver:
+    - "2001:4860:4860::8888"  # Google IPv6 DNS
+    - "2001:4860:4860::8844"  # Google IPv6 DNS
+  fallback:
+    - "1.1.1.1"  # Cloudflare IPv4
+    - "1.0.0.1"  # Cloudflare IPv4
+    - "2606:4700:4700::1111"  # Cloudflare IPv6
+    - "2606:4700:4700::1001"  # Cloudflare IPv6
+
+
+proxies:
+  - name: play4
+    type: ss
+    server: 45.135.41.214
+    port: 21213
+    cipher: aes-128-gcm
+    password: mlUTnVjpAo72yFTbKB904E91Pus4UADAffAEnUSAnFg=
+    udp: true
+    udp-over-tcp: false
+    udp-over-tcp-version: 2
+    ip-version: ipv4
+  - name: play1
+    type: ss
+    server: 103.135.250.99
+    port: 21211
+    cipher: aes-256-gcm
+    password: 5m+HMHIFx2dVQdKH6+hEjhcvYWiuGXYew1B87HQHjCk=
+    udp: true
+    udp-over-tcp: false
+    udp-over-tcp-version: 2
+    ip-version: ipv4
+  - name: play2
+    type: ss
+    server: 103.135.250.99
+    port: 21212
+    cipher: aes-256-gcm
+    password: xlnD2Z5gmkdNzQnuseiXSfT6LAORNvLbm4HHiAun2ik=
+    udp: true
+    udp-over-tcp: false
+    udp-over-tcp-version: 2
+    ip-version: ipv4
+  - name: play3
+    type: ss
+    server: 103.135.250.99
+    port: 21213
+    cipher: aes-256-gcm
+    password: tgJVZeaPTH4cdrOpQYKSm1K2JnXEdOwX3hptXQWtCmQ=
+    udp: true
+    udp-over-tcp: false
+    udp-over-tcp-version: 2
+    ip-version: ipv4
+proxy-providers:
+          机场:
+            type: http
+            url: https://raw.githubusercontent.com/s443878393/Clash/refs/heads/main/TAG(1).plain
+            interval: 86400
+            path: ./proxy_provider/jc.yaml
+            udp: false
+            health-check:
+              enable: true
+              interval: 600
+              url: http://connectivitycheck.gstatic.com/generate_204
+              fastping: true
+proxy-groups:
+  - name: 主线路
+    proxies:
+      - DIRECT
+      - 谷歌分流
+    use:
+      - 机场
+    type: select
+    disable-udp: true
+    health-check:
+      enable: true
+      interval: 600
+      url: http://connectivitycheck.gstatic.com/generate_204
+      fastping: true
+
+  - name: 谷歌分流
+    proxies:
+      - play1
+      - play2
+      - play3
+      - play4
+    type: select
+    disable-udp: false
+    health-check:
+      enable: false
+      interval: 600
+      url: http://connectivitycheck.gstatic.com/generate_204
+rules:
+#  - AND,((NETWORK,UDP),(DOMAIN,play-fe.googleapis.com)),谷歌分流
+  - DOMAIN,play.googleapis.com,谷歌分流
+  - DOMAIN,myaccount.google.com,谷歌分流
+  - DOMAIN-KEYWORD,accounts.google.com,主线路
+  - DOMAIN,play-fe.googleapis.com,谷歌分流
+  - DOMAIN,sspanel.net,谷歌分流
+  - DOMAIN,payments-pa.googleapis.com,谷歌分流
+  - DOMAIN,ipwho.is,谷歌分流
+
+  - MATCH,主线路
